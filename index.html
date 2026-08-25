@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Simple Template</title>
+    
+    <style>
+        /* CSS Variables for easy customization */
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Modern Grid Layout */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        header, footer {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        section, aside {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h1>Welcome to My Modern Site</h1>
+    </header>
+
+    <!-- Main Content Container with Layout Grid -->
+    <main class="layout-grid">
+        
+        <!-- Primary Article/Content Area -->
+        <section>
+            <h2>Main Feature Block</h2>
+            <p>This layout uses advanced CSS Grid properties, but the underlying HTML structures remain incredibly organized and intuitive.</p>
+            
+            <!-- Quick Interactive Script Element -->
+            <button id="alertBtn">Interact with Me</button>
+        </section>
+
+        <!-- Contextual Sidebar -->
+        <aside>
+            <h3>Quick Insights</h3>
+            <ul>
+                <li>Semantic Tags</li>
+                <li>Responsive Viewport</li>
+                <li>Embedded Layouts</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 Advanced HTML Simple Sample.</p>
+    </footer>
+
+    <!-- Vanilla Javascript for Interaction -->
+    <script>
+        const button = document.getElementById('alertBtn');
+        button.addEventListener('click', () => {
+            alert('Hello! You successfully interacted with an advanced HTML template snippet.');
+        });
+    </script>
+
+</body>
+</html>
