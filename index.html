@@ -3,106 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Simple Template</title>
-    
+    <title>My Profile Page</title>
     <style>
-        /* CSS Variables for easy customization */
-        :root {
-            --primary-color: #2563eb;
-            --bg-color: #f8fafc;
-            --text-color: #1e293b;
-        }
-
+        /* Basic page styling */
         body {
-            font-family: system-ui, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 200px;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
-        /* Modern Grid Layout */
-        .layout-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-
-        header, footer {
+        /* About Me section card */
+        .about-section {
             background: #ffffff;
-            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        section, aside {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        /* Profile image placeholder */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
 
-        button {
-            background-color: var(--primary-color);
+        /* Heading style */
+        .about-section h1 {
+            margin: 10px 0 5px;
+            color: #2c3e50;
+        }
+
+        /* Subtitle style */
+        .title {
+            font-weight: bold;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        /* Social media links */
+        .social-links a {
+            display: inline-block;
+            margin: 10px 8px;
+            padding: 8px 16px;
+            background-color: #3498db;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .layout-grid {
-                grid-template-columns: 1fr;
-            }
+        .social-links a:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <!-- Semantic Header -->
-    <header>
-        <h1>Welcome to My Modern Site</h1>
-    </header>
-
-    <!-- Main Content Container with Layout Grid -->
-    <main class="layout-grid">
+    <!-- Main Content Wrapper -->
+    <main>
         
-        <!-- Primary Article/Content Area -->
-        <section>
-            <h2>Main Feature Block</h2>
-            <p>This layout uses advanced CSS Grid properties, but the underlying HTML structures remain incredibly organized and intuitive.</p>
+        <!-- About Me Section -->
+        <section class="about-section">
+            <!-- Replace the src with your actual image URL or local path -->
+            <img src="https://placeholder.com" alt="Your Profile Picture" class="profile-img">
             
-            <!-- Quick Interactive Script Element -->
-            <button id="alertBtn">Interact with Me</button>
+            <h1>Your Name</h1>
+            <p class="title">Web Developer & Designer</p>
+            
+            <p>
+                Hi there! Welcome to my profile. I love building clean, functional, 
+                and accessible websites. In my free time, I enjoy learning new web 
+                technologies, writing tutorials, and contributing to open-source projects.
+            </p>
+            
+            <!-- Add Me / Connect Section Links -->
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank">Add on LinkedIn</a>
+                <a href="https://github.com" target="_blank">Follow on GitHub</a>
+                <a href="mailto:your.email@example.com">Email Me</a>
+            </div>
         </section>
 
-        <!-- Contextual Sidebar -->
-        <aside>
-            <h3>Quick Insights</h3>
-            <ul>
-                <li>Semantic Tags</li>
-                <li>Responsive Viewport</li>
-                <li>Embedded Layouts</li>
-            </ul>
-        </aside>
-
     </main>
-
-    <!-- Semantic Footer -->
-    <footer>
-        <p>&copy; 2026 Advanced HTML Simple Sample.</p>
-    </footer>
-
-    <!-- Vanilla Javascript for Interaction -->
-    <script>
-        const button = document.getElementById('alertBtn');
-        button.addEventListener('click', () => {
-            alert('Hello! You successfully interacted with an advanced HTML template snippet.');
-        });
-    </script>
 
 </body>
 </html>
